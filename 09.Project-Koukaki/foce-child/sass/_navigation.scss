@@ -1,0 +1,47 @@
+
+.main-navigation.toggled ul {
+	display: flex !important;
+}
+
+#site-navigation {
+  position: relative;
+}
+
+.modal__burger {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 8px;
+  width: 40px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 3em;
+  cursor: pointer;
+}
+
+.modal__burger .line {
+  height: 2px;
+  background-color: #000;
+  display: block;
+  width: 100%;
+  margin: 0;
+  transition: all .3s ease-in-out;
+}
+
+
+/* Button to close */
+.modal__burger.close .line:nth-child(2) {
+  opacity: 0;
+}
+
+.modal__burger.close .line:first-child {
+  transform: rotate(45deg) translate3d(8px, 6px, 0);
+}
+
+.modal__burger.close  span.line:last-child {
+  transform: rotate(-45deg) translate3d(8px, -6px, 0);
+}

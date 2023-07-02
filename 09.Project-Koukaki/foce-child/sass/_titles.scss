@@ -1,0 +1,75 @@
+/*       TITLE H2 / H3      */
+
+.story #characters {
+	margin: 6em;
+	display: flex;
+	flex-direction: column;
+}
+
+.story > h2,
+.studio >  h2,
+#characters > h3,
+#place h3 {
+  color: transparent;
+  height: 202px;
+}
+
+.story > h2,
+.studio >  h2,
+#characters > h3 {
+  z-index: -1;
+}
+
+
+#place h3 {
+  z-index: 4;
+}
+
+.story > h2,
+.studio >  h2 {
+  width: 100%;
+}
+
+#characters > h3,
+#place h3  {
+  position: relative;
+  width: 40%;
+}
+
+.story > h2 span,
+.studio > h2 span,
+#characters span,
+#place span {
+  position: absolute;
+  color: #FFF5E9;
+  opacity: 0;
+  z-index: 4;
+}
+
+.story > h2 span,
+.studio > h2 span,
+#characters span,
+#place span {
+  top: 100px;
+}
+
+.story #characters,
+#characters > h3 span,
+#place span {
+  width: 100%;
+}
+
+.animTitle {
+  animation: animTitle 1s 1s forwards;
+}
+
+@keyframes animTitle {
+	0% {
+    transform: translate3d(-50%, 50%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 1;
+  }
+}

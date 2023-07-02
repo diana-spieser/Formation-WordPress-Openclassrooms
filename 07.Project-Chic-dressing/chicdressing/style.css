@@ -1,0 +1,123 @@
+/*
+Theme Name:		 chicdressing
+Theme URI:		 http://childtheme-generator.com/
+Description:	 chicdressing is a child theme of Ashe, created by ChildTheme-Generator.com
+Author:			 Chic Dressing
+Author URI:		 http://childtheme-generator.com/
+Template:		 ashe
+Version:		 1.0.0
+Text Domain:	 chicdressing
+*/
+
+/*
+    Add your custom styles here
+*/
+
+/*
+    Add your custom styles here
+*/
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('assets/fonts/PlayfairDisplay-Regular.ttf') format('truetype'),
+    url('assets/fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('assets/fonts/OpenSans-Regular.ttf') format('truetype'),
+    url('assets/fonts/OpenSans-Italic.ttf') format('truetype'),
+    url('assets/fonts/OpenSans-Bold.ttf') format('truetype'),
+    url('assets/fonts/OpenSans-BoldItalic.ttf') format('truetype'),
+    url('assets/fonts/OpenSans-SemiBold.ttf') format('truetype'),
+    url('assets/fonts/OpenSans-SemiBoldItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kalam';
+  src: url('assets/fonts/Kalam-Regular.ttf') format('truetype'),
+    url('assets/fonts/Kalam-Bold.ttf') format('truetype'),
+    url('assets/fonts/Kalam-Light.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rokkitt';
+  src: url('assets/fonts/Rokkitt-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+body {
+  font-family: 'Playfair Display', 'Open Sans' 'Kalam' 'Rokkitt';
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', 'Open Sans' 'Kalam' 'Rokkitt';
+}
+
+body .page-content,
+.page-content select,
+.page-content input,
+.page-content textarea,
+.page-content .post-author a,
+.page-content .ashe-widget a,
+.page-content .comment-author {
+  /* Changement de la couleur du corps de texte */
+  /* color: #a5a5a5; */
+  color: black;
+  font-size: 15px;
+}
+
+body .header-logo a {
+  color: white;
+  text-shadow: 2px 3px 5px #d0527a;
+  transform: rotate(-9deg);
+}
+.text-center {
+  text-align: center;
+}
+
+.chic-bouton {
+  color: #ffffff;
+  background-color: #333333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 12px;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 14px;
+}
+
+#featured-slider {
+  margin-bottom: 30px;
+}
+#chic-products {
+  padding: 0 40px;
+}
+.chic-title {
+  font-family: 'Kalam';
+  font-size: 52px;
+  text-decoration: inherit;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+  margin: 30px 40px;
+  text-align: center;
+  color: #9d4c64 !important;
+  line-height: 48px;
+}
+#chic-products ul.products li.product {
+  background: #f6f6f6;
+  padding-bottom: 20px;
+}
+
+#chic-products ul.products li.product {
+  border: 1px solid #ad5c14;
+}

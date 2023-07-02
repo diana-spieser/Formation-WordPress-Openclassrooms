@@ -1,0 +1,157 @@
+/*       NOMINATION       */
+
+
+.nomination {
+  position: relative;
+  padding: 150px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.nomination__title {
+  position: relative;
+}
+
+.nomination__title img {
+  height: 100%;
+}
+
+.nomination__title h3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 3.2rem;
+  text-align: left;
+}
+
+.nomination img {
+  height: 100%;
+}
+
+/* Suppression des fleurs du pieds de page pour le déplacer dans la nouvelle section- */
+.nomination::before {
+  content: url("../assets/images/Sunflower.png");
+  position: absolute;
+  left: 4em;
+  top: 0em;
+}
+
+.nomination::after {
+  content: url("../assets/images/orchid.png");
+  position: absolute;
+  right: -4em;
+  top: -3em;
+}
+
+.site-footer::before {
+  content: '';
+}
+
+.site-footer::after {
+  content: '';
+}
+
+#place h3 {
+  width: 60%;
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 1192px    */
+/*  **********************************  */
+@media all and (max-width: 1192px) {
+  .nomination h3 {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 920px    */
+/*  **********************************  */
+@media all and (max-width: 920px) {
+  h2 {
+    font-size: 3.3rem;
+  }
+
+  .story > h2 span,
+  .studio > h2 span {
+    width: 100%;
+  }
+
+  .story #characters {
+    margin-top: 10px !important;
+  }
+
+  #characters > h3,
+  #place h3 {
+    width: 100%;
+  }
+
+  #nomination {
+    padding-top: 20px;
+  }
+
+  .nomination h3 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+
+  #studio h2::before,
+  .nomination::before,
+  .nomination::after {
+    content: '';
+  }
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 700px    */
+/*  **********************************  */
+@media all and (max-width: 700px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  .nomination h3 {
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+  }
+
+  #characters span,
+  #place span {
+    top: 100px;
+  }
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 480px    */
+/*  **********************************  */
+@media all and (max-width: 480px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+    #characters span,
+    #place span {
+      top: 100px;
+    }
+
+  .nomination__title {
+    height:200px
+  }
+
+  .nomination h3 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  .nomination__logo {
+    max-width: 70%;
+  }
+}

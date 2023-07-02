@@ -1,0 +1,28 @@
+.story #place {
+  position: relative;
+background-image: url('../assets/images/Studio_Koukaki-image_place.png');
+  z-index: -1;
+}
+
+#place .place--big_cloud,
+#place .place--little_cloud {
+  position: absolute;
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  z-index: 2;
+}
+
+#place .place--big_cloud {
+  height: 122px;
+  top: 70px;
+  right: 90px;
+  transform: translateX(var(--posX));
+}
+
+#place .place--little_cloud {
+  height: 55px;
+	top: 250px;
+  right: 500px;
+  transform: translateX(var(--posX));
+}

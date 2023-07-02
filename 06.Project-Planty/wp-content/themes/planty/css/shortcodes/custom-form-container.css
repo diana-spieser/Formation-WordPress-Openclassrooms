@@ -1,0 +1,269 @@
+/* CSS formulaire  commander */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -25px;
+  margin-left: -18px;
+}
+
+.btns-increment-container {
+  display: flex;
+}
+
+.btns-increment {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-num {
+  width: 58px !important;
+  /* height: 56px !important; */
+  font-size: 16px !important;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  border: none !important;
+  border-radius: 7px 0 0 7px !important;
+  background: #ffffff !important ;
+
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04) !important;
+}
+
+.btn-plus,
+.btn-moins {
+  width: 31px;
+  height: 24px;
+  font-size: 13px;
+  line-height: 14px;
+  cursor: pointer;
+  border: none;
+  background: #dc9f96;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.btn-plus {
+  border-bottom: 1px solid #fff;
+  border-radius: 0 7px 0 0;
+  color: #fff;
+}
+
+.btn-moins {
+  border-radius: 0 0 7px 0;
+}
+
+.btn-plus:hover,
+.btn-moins:hover {
+  text-decoration: none !important;
+}
+.submit-btn {
+  width: 106px;
+  /* height: 56px !important; */
+  background: #e0b9b4 !important;
+  border-radius: 7px !important;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.submit-btn:hover {
+  background: #c02e44 !important;
+  text-decoration: none !important;
+}
+
+/* Positionnement des colonnes */
+.form-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+}
+.col-container {
+  display: flex;
+  padding-top: 50px ;
+  max-width: 110rem;
+}
+.col-left,
+.col-right {
+  width: 100%;
+}
+.col-right {
+  padding-left: 50px;
+}
+.col-left {
+ padding-left: 50px;
+}
+/* Styles des titres h2 */
+.col-left h2,
+.col-right h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+  margin: 0!important;
+}
+/* Styles des labels */
+.col-left label,
+.col-right label {
+  width: 150px;
+  height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.form-group {
+  width: 383px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.col-left input,
+.col-right input {
+  width: 100%;
+  height: 71px;
+  background: #ffffff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+  border: none;
+  border-radius: 7px !important;
+  margin-top: 13px;
+  /* margin-bottom: 50px; */
+}
+/* Trait blanc de séparation */
+.col-left {
+  border-right: 1px solid #fff;
+}
+.ligne-vericale {
+  border-bottom: 1px solid #fff;
+  margin: 25px 0 5px 0;
+}
+/* Retrait des btns internes à l'input*/
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* BTN Submit*/
+.col-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+.btn-submit,
+.wpcf7-submit {
+  display: block !important;
+  width: 198px !important;
+  height: 55px !important;
+  background: #e0b9b4 !important;
+  border-radius: 7px !important;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.btn-submit:hover,
+.wpcf7-submit:hover {
+  background: #c02e44 !important;
+  text-decoration: none !important;
+}
+
+/* Styles message Response Ouput */
+/* .wpcf7-response-output {
+    font-size: 20px;
+    color: #fff !important;
+    text-align: center;
+    margin-top: 0 !important;
+} */
+.confirmation-container {
+  display: flex !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  color: #fff !important;
+  padding-bottom: 20px !important;
+}
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .col-left input,
+  .col-right input {
+    height: 51px;
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form-group {
+    width: 50%;
+  }
+  .col-container {
+    flex-wrap: wrap;
+  }
+  .col-left {
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .col-right {
+    margin-top: 30px;
+    padding-left: 0;
+  }
+  .col-left,
+  .col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-group {
+    width: 60%;
+  }
+  .col-left input,
+  .col-right input {
+    height: 51px;
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .col-left h2,
+  .col-right h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .form-group {
+    width: 80%;
+  }
+  .col-left label,
+  .col-right label {
+    font-size: 17px;
+  }
+  .col-left input,
+  .col-right input {
+    height: 41px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .form_group {
+    width: 90%;
+  }
+}

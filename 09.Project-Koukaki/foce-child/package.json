@@ -1,0 +1,25 @@
+{
+  "name": "foce-child",
+  "version": "1.0.0",
+  "description": "Child theme for the Foce theme.",
+  "author": "Diana Spieser",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.6.0",
+    "dir-archiver": "^2.1.0",
+    "node-sass": "^9.0.0",
+    "rtlcss": "^4.1.0"
+  },
+  "scripts": {
+    "watch": "node-sass sass/ -o ./dist/css/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass sass/ -o ./dist/css/ && stylelint 'dist/css/*.css' --fix || true && stylelint 'dist/css/*.css' --fix",
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
+  },
+  "dependencies": {
+    "jquery-modal": "^0.9.2",
+    "swiper": "^9.4.1"
+  }
+}

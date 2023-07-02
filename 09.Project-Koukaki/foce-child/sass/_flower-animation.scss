@@ -1,0 +1,58 @@
+
+/*     FLOWER - MAIN     */
+
+
+/* Ajustements pour qu'elles puissent tourner rond */
+/* Sunflower.png */
+.story h2::after,
+.site-footer::before {
+	width: 154px;
+	height: 154px;
+}
+
+/* random_flower.png */
+#studio h2::before {
+  width: 203px;
+	height: 203px;
+}
+
+/* flower.png */
+#studio h2::after {
+  width: 109px;
+	height: 109px;
+}
+
+/* orchid.png */
+.site-footer::after {
+  width: 173px;
+  height: 173px;
+}
+
+/* Hibiscus.png */
+.story__article::after {
+	width: 188px;
+	height: 188px;
+}
+
+/* Ajout d'une rotation sur les fleurs */
+.story__article::after,
+#studio h2::before,
+.story h2::after,
+#studio h2::after,
+.site-footer::before,
+.site-footer::after,
+.nomination::before,
+.nomination::after,
+.site-footer ul::after,
+.modal ::after {
+  animation: rotate-flower var(--rotate) linear infinite;
+}
+
+@keyframes rotate-flower {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
