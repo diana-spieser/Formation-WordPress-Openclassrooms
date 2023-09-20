@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+    font-family: $police-principale;
+    line-height: 24px;
+    text-transform: uppercase;
+    .menu {
+        display: flex;
+    }
+    li {
+        &:hover {
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+}

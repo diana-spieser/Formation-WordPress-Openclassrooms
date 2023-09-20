@@ -1,0 +1,110 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    h1 {
+        align-self: center;
+        position: absolute;
+        font-family: $police-principale;
+        font-style: italic;
+        font-size: 6.3vw;
+        text-transform: uppercase;
+        text-shadow: 3px 0 #fff, -3px 0 #fff, 0 3px #fff, 0 -3px #fff, 3px 3px #fff, -3px -3px #fff, 3px -3px #fff, -3px 3px #fff;
+        mix-blend-mode: lighten;
+    }
+    &__background {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.filtres {
+    font-family: $police-secondaire;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    .filtre {
+        display: flex;
+        flex-direction: column;
+    }
+    select {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #000000;
+        font-family: $police-secondaire;
+        font-size: 14px;
+        padding-left: 24px;
+        margin-bottom: 10px;
+    }
+}
+
+.galerie {
+    padding-top: 32px;
+    &__photos {
+        flex-wrap: wrap;
+    }
+    &__btn {
+        margin: 27px auto 47px auto;
+        width: 120px;
+        height: 34px;
+        input {
+            width: 100%;
+            height: 100%;
+            font-family: $police-principale;
+            background-color: #D8D8D8;
+            font-size: 12px;
+            border: none;
+        }
+        input, img {
+            border-radius: 2px;
+        }
+        img {
+            cursor: pointer;
+            background-color: black;
+            padding: 9px 52px;
+            opacity: 0;
+            position: absolute;
+            width: 16px;
+            margin-left: -120px;
+            transition: all 350ms ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .filtres {
+        flex-direction: column;
+        margin-bottom: 30px;
+        &__taxonomie {
+            width: 100%;
+            form {
+                width: 47.5%;
+            }
+            form:first-child {
+                padding-right: 5%;
+            }
+        }
+        &__tri {
+            width: 100%;
+            div:first-child {
+                width: 0%;
+            }
+        }
+        select {
+            padding-left: 10px;
+        }
+    }
+    .hero {
+        height: 40vh;
+        h1 {
+            text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+        }
+    }
+}

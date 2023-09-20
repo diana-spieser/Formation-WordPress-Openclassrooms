@@ -1,0 +1,12 @@
+{
+  "name": "photographe-event",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "build": "scss --watch styles/scss/style.scss:styles/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,131 @@
+.bloc-photo {
+  margin-top: 38px;
+  font-family: $police-principale;
+  &__description {
+    border-bottom: 1px solid black;
+    align-self: flex-end;
+    padding-bottom: 43px;
+  }
+  &__image {
+    object-fit: contain;
+  }
+  h1 {
+    font-style: italic;
+    padding-bottom: 40px;
+    width: 70%;
+    margin-left: -1%;
+  }
+  p {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 9px;
+  }
+}
+
+.interaction-photo {
+  height: 118px;
+  border-bottom: 1px solid black;
+  > div {
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 142px;
+  }
+  &__navigation {
+    width: 108px;
+    display: flex;
+    flex-direction: column;
+    .preview {
+      width: 78px;
+      height: 50%;
+      margin: auto 0 auto auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+      }
+      .previous-image {
+        margin-top: 38%;
+      }
+      .next-image {
+        margin-top: -38%;
+      }
+    }
+    .arrows {
+      width: 108px;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      margin-top: 92px;
+      .arrow {
+        width: 25px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.recommandations {
+  padding-top: 77px;
+  h2 {
+    padding-bottom: 40px;
+    font-family: $police-principale;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  &__btn {
+    width: 214px;
+    display: block;
+    margin: 51px auto 71px auto;
+  }
+}
+
+.texte {
+  font-family: $police-secondaire;
+  font-weight: 300;
+  font-size: 14px;
+  margin-right: 28px;
+}
+
+@media screen and (max-width: 1000px) {
+  .bloc-photo {
+    margin-top: 0;
+    h1 {
+      width: 100%;
+      margin-top: 40px;
+      font-size: 46px;
+    }
+  }
+  .page-photo .colonnes {
+    flex-direction: column-reverse;
+  }
+  .interaction-photo {
+    height: 133px;
+    > div {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 26px;
+    }
+    &__btn {
+      margin-top: 21px;
+    }
+    &__navigation .arrows {
+      display: none;
+    }
+  }
+  .recommandations {
+    padding-top: 30px;
+    h2 {
+      padding-bottom: 30px;
+    }
+    &__btn {
+      margin: 11px auto 31px auto;
+    }
+  }
+}

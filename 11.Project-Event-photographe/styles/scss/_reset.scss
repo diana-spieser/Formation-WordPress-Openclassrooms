@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+main {
+    max-width: 1980px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.bloc-page {
+    width: 80%;
+    padding: 0 10%;
+}
+.colonnes {
+    display: flex;
+    justify-content: space-between;
+}
+.colonne {
+    width: 49.2%;
+}
+
+h1 {
+    font-family: $police-principale;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 65px;
+    text-transform: uppercase;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    h1 {
+        margin-bottom: 100px;
+    }
+    &__contenu {
+        font-family: $police-secondaire;
+        font-weight: 400;
+        width: 70%;
+        text-align: justify;
+        h2 {
+            font-family: $police-principale;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+    }
+}
+.page-404 {
+    height: 50vh;
+}
+
+
+#wpadminbar {
+    position: fixed;
+    z-index: 95;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .bloc-page {
+        width: 80%;
+    }
+    .colonne {
+        width: 100%;
+    }
+    h1 {
+        font-size: 46px;
+    }
+    .page {
+        &__contenu {
+            width: 90%;
+        }
+    }
+}

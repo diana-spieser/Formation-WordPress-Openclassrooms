@@ -1,0 +1,33 @@
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 7px 0;
+    border-top: 1px solid black;
+    z-index: 0;
+    &__nav {
+        justify-content: center;
+        li:nth-child(2) {
+            margin-left: 86px;
+        }
+        li {
+            min-width: 196px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        text-align: center;
+        padding: 43px 0;
+        &__nav li:nth-child(2) {
+            margin: 24px 0;
+        }
+        &__nav, .menu {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

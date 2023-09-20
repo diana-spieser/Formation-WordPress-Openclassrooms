@@ -1,0 +1,146 @@
+.modale {
+
+    display: none;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        width: 597px;
+        height: 759px;
+        border: 5px solid black;
+        overflow-x: hidden;
+        background-color: white;
+
+        &__close {
+            margin-left: 598px;
+            margin-top: -44px;
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 50%;
+            & img {
+                padding: 70%;
+                border-radius: 50%;
+                transition: all 200ms;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+
+        &__header {
+            padding-top: 8px;
+            padding-bottom: 22px;
+            &__line {
+                display: inline-flex;
+                img {
+                    width: 280px;
+                    height: 48px;
+                }
+                &:first-child {
+                    animation: textLoop 10s linear infinite;
+                }
+                &:last-child {
+                    animation: textLoop 10s  -5s linear reverse infinite;
+                }
+            }
+        }
+
+        form {
+            width: 44%;
+            margin: auto;
+            font-family: $police-secondaire;
+            p {
+                margin-top: 24px;
+            }
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            input {
+                height: 40px;
+                padding: 0 2%;
+                text-transform: uppercase;
+            }
+            textarea {
+                padding: 2%;
+                height: 132px;
+            }
+            input, textarea {
+                width: 96%;
+                resize: none;
+                border: 1px solid black;
+                border-radius: 0;
+                font-family: $police-secondaire;
+            }
+            .bouton {
+                width: 81%;
+                display: block;
+                margin: 0 auto;
+                margin-top: 37px;
+                border: none;
+            }
+
+            .wpcf7-not-valid-tip {
+                font-size: 12px;
+                margin-bottom: -18px;
+            }
+            .wpcf7-spinner {
+                display: none;
+            }
+            div.wpcf7-response-output {
+                margin: 0.6em 0em 0em;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .modale {
+        &__content {
+            height: 95%;
+            width: 90%;
+            &__close {
+                margin-left: 89%;
+                margin-top: -15px;
+                & img {
+                    padding: 70%;
+                    padding: 0;
+                    &:hover {
+                        background: none;
+                    }
+                }
+            }
+            &__header {
+                margin-bottom: -24px;
+                &__line {
+                    img {
+                        width: 140px;
+                        height: 24px;
+                    }
+                }
+            }
+            form {
+                width: 66%;
+                margin-bottom: 10px;
+                > p:first-child {
+                    margin-top: 0;
+                }
+                .bouton {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
